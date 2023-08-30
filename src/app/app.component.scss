@@ -1,0 +1,23 @@
+form{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    
+    &>div{
+        
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    input{
+        border: 1px solid black;
+        border-radius: 4px;
+        padding: 0.5rem;
+    }
+    }
+}
+
+.erro{
+    color: red;
+}

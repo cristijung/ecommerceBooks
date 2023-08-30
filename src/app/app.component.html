@@ -1,4 +1,4 @@
-<form [formGroup]="myForm" (ngSubmit)="(submitForm)">
+<form [formGroup]="myForm" (ngSubmit)="submitForm()">
   <div>
     <input
       type="text"
@@ -8,7 +8,10 @@
     />
     <div
       class="erro"
-      *ngIf="myForm.get('codigoCadastro)?.invalid && myForm.get('codigoCadastro)?.touched"
+      *ngIf="
+        myForm.get('codigoCadastro')?.invalid &&
+        myForm.get('codigoCadastro')?.touched
+      "
     >
       Código de cadastro é obrigatório
     </div>
@@ -33,7 +36,7 @@
     >
       Categoria é obrigatória
     </div>
-    <input type="text" placeholder="autor" matInput formControlName="author" />
+    <input type="text" placeholder="autor" matInput formControlName="autor" />
     <div
       class="erro"
       *ngIf="myForm.get('autor')?.invalid && myForm.get('autor')?.touched"
@@ -67,11 +70,13 @@
     >
       Data da Última Edição é obrigatória
     </div>
+    <label for="precoCusto">Preço de Custo</label>
     <input
       type="number"
       placeholder="Preço de Custo"
       matInput
       formControlName="precoCusto"
+      id="precoCusto"
     />
     <div
       class="erro"
@@ -81,11 +86,13 @@
     >
       Preço de custo é obrigatório
     </div>
+    <label for="precoVenda">Preço de Venda</label>
     <input
       type="number"
       placeholder="Preço de Venda"
       matInput
       formControlName="precoVenda"
+      id="precoVenda"
     />
     <div
       class="erro"
@@ -95,11 +102,13 @@
     >
       Preço de venda é obrigatório
     </div>
+    <label for="volumesEstoque">Volumes em Estoque</label>
     <input
       type="number"
       placeholder="Volumes em Estoque"
       matInput
       formControlName="volumesEstoque"
+      id="volumesEstoque"
     />
     <div
       class="erro"
@@ -110,11 +119,13 @@
     >
       Volumes em estoque é obrigatório
     </div>
+    <label for="vendidos">Volumes Vendidos</label>
     <input
       type="number"
       placeholder="Vendidos"
       matInput
       formControlName="vendidos"
+      id="vendidos"
     />
     <div
       class="erro"
@@ -122,11 +133,13 @@
     >
       Quantidade de livros vendidos é obrigatório
     </div>
+    <label for="dataUltimaVenda">Data da Última Venda</label>
     <input
       type="date"
       placeholder="Data da Última Venda"
       matInput
       formControlName="dataUltimaVenda"
+
     />
     <div
       class="erro"
@@ -137,6 +150,7 @@
     >
       Data da última venda é obrigatória
     </div>
+    <label for="nomeVendedor">Nome do Vendedor</label>
     <input
       type="text"
       placeholder="Nome do Vendedor"
@@ -160,5 +174,5 @@
     />
     <label for="comissao">Deseja aplicar comissão?</label>
   </div>
-  <button mat-button>Cadastrar</button>
+  <button mat-button type="submit">Cadastrar</button>
 </form>
