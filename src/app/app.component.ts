@@ -12,9 +12,17 @@ export class AppComponent {
   constructor(private FormBuilder: FormBuilder) {
     this.myForm = this.FormBuilder.group({
       codigoCadastro: ['', Validators.required],
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      message: ['', [Validators.maxLength(300), Validators.minLength(1)]],
+      titulo: ['', [Validators.required, Validators.minLenght(3), Validators.maxLenght(120)]],
+      categoria: ['', [Validators.required, Validators.minLenght(3), Validators.maxLenght(120)]],
+      autor: ['', [Validators.required, Validators.minLenght(3), Validators.maxLenght(120)]],
+      editora: ['', [Validators.required, Validators.minLenght(3), Validators.maxLenght(120)]],
+      dataUltimaEdicao: ['', Validators.required],
+      precoCusto: [0, [Validators.required, Validators.min(0)]],
+      precoVenda: [0, [Validators.required, Validators.min(0)]],
+      volumesEstoque: [0, [Validators.required, Validators.min(0)]],
+      vendidos: [0,  [Validators.required, Validators.min(0)]],
+      dataUltimaVenda: ['', Validators.required],
+      nomeVendedor: ['', [Validators.required, Validators.minLenght(3), Validators.maxLenght(120)]],
     });
   }
 

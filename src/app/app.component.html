@@ -1,6 +1,7 @@
 <form [formGroup]="myForm" (ngSubmit)="submitForm">
   <div>
-    <label for="">Código de cadastro</label>
-    <input type="text">
+    <input type="time" placeholder="Código de cadastro" matInput formControlName="codigoCadastro" />
+    <input type="time" placeholder="Título" matInput formControlName="titulo" />
+    <input type="time" placeholder="Categoria" matInput formControlName="categoria" />
   </div>
 </form>
