@@ -12,17 +12,18 @@ export class AppComponent {
   constructor(private FormBuilder: FormBuilder) {
     this.myForm = this.FormBuilder.group({
       codigoCadastro: ['', Validators.required],
-      titulo: ['', [Validators.required, Validators.minLenght(3), Validators.maxLenght(120)]],
-      categoria: ['', [Validators.required, Validators.minLenght(3), Validators.maxLenght(120)]],
-      autor: ['', [Validators.required, Validators.minLenght(3), Validators.maxLenght(120)]],
-      editora: ['', [Validators.required, Validators.minLenght(3), Validators.maxLenght(120)]],
+      titulo: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(120)]],
+      categoria: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(120)]],
+      autor: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(120)]],
+      editora: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(120)]],
       dataUltimaEdicao: ['', Validators.required],
       precoCusto: [0, [Validators.required, Validators.min(0)]],
       precoVenda: [0, [Validators.required, Validators.min(0)]],
       volumesEstoque: [0, [Validators.required, Validators.min(0)]],
       vendidos: [0,  [Validators.required, Validators.min(0)]],
       dataUltimaVenda: ['', Validators.required],
-      nomeVendedor: ['', [Validators.required, Validators.minLenght(3), Validators.maxLenght(120)]],
+      nomeVendedor: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(120)]],
+      comissao: [true],
     });
   }
 

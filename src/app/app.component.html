@@ -1,7 +1,19 @@
 <form [formGroup]="myForm" (ngSubmit)="submitForm">
   <div>
-    <input type="time" placeholder="Código de cadastro" matInput formControlName="codigoCadastro" />
-    <input type="time" placeholder="Título" matInput formControlName="titulo" />
-    <input type="time" placeholder="Categoria" matInput formControlName="categoria" />
+    <input type="text" placeholder="Código de cadastro" matInput formControlName="codigoCadastro" />
+    <input type="text" placeholder="Título" matInput formControlName="titulo" />
+    <input type="text" placeholder="Categoria" matInput formControlName="categoria" />
+    <input type="text" placeholder="autor" matInput formControlName="author" />
+    <input type="text" placeholder="editora" matInput formControlName="editora" />
+    <input type="date" placeholder="Data da Última Edição" matInput formControlName="dataUltimaEdicao" />
+    <input type="number" placeholder="Preço de Custo" matInput formControlName="precoCusto" />
+    <input type="number" placeholder="Preço de Venda" matInput formControlName="precoVenda" />
+    <input type="number" placeholder="Volumes em Estoque" matInput formControlName="volumesEstoque" />
+    <input type="number" placeholder="Vendidos" matInput formControlName="vendidos" />
+    <input type="date" placeholder="Data da Última Venda" matInput formControlName="dataUltimaVenda" />
+    <input type="text" placeholder="Nome do Vendedor" matInput formControlName="nomeVendedor" />
+    <input type="checkbox" name="comissao" id="comissao" formControlName="comissao">
+    <label for="comissao">Deseja aplicar comissão?</label>
   </div>
+  <button mat-button>Cadastrar</button>
 </form>
