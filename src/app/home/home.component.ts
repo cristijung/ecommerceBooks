@@ -15,14 +15,14 @@ export class HomeComponent {
       .subscribe((data) => {
         this.books = data.map((book) => ({
           ...book,
-          preco_venda: book.preco_venda.toLocaleString('pt-BR', {
+          preco_venda: parseFloat(book.preco_venda).toLocaleString('pt-BR', {
             style: 'currency',
             currency: 'BRL',
             minimumFractionDigits: 2,
             maximumFractionDigits: 2,
           }),
         }));
-        console.log(data);
+        console.log(this.books);
       });
   }
 

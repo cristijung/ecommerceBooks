@@ -56,10 +56,10 @@ export class AppComponent {
         ],
       ],
       dataUltimaEdicao: ['', Validators.required],
-      precoCusto: [0, [Validators.required, Validators.min(0)]],
-      precoVenda: [0, [Validators.required, Validators.min(0)]],
-      volumesEstoque: [0, [Validators.required, Validators.min(0)]],
-      vendidos: [0, [Validators.required, Validators.min(0)]],
+      precoCusto: ["", [Validators.required, Validators.min(0)]],
+      precoVenda: ["", [Validators.required, Validators.min(0)]],
+      volumesEstoque: ["", [Validators.required, Validators.min(0)]],
+      vendidos: ["", [Validators.required, Validators.min(0)]],
       dataUltimaVenda: ['', Validators.required],
       nomeVendedor: [
         '',
@@ -100,6 +100,7 @@ export class AppComponent {
       lastValueFrom(promise).then(() => {
         alert("Formulário enviado com sucesso!");
         this.myForm.reset();
+        location.reload()
       }).catch(() => {
         alert("Ocorreu um erro ao enviar o formulário");
       });
