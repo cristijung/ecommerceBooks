@@ -22,6 +22,25 @@
     >
       Título é obrigatório
     </div>
+    <input type="text" placeholder="Descrição" matInput formControlName="descricao" />
+    <div
+      class="erro"
+      *ngIf="myForm.get('descricao')?.invalid && myForm.get('descricao')?.touched"
+    >
+      Descrição é obrigatória
+    </div>
+    <input
+      type="text"
+      placeholder="Imagem"
+      matInput
+      formControlName="imagem"
+    />
+    <div
+      class="erro"
+      *ngIf="myForm.get('imagem')?.invalid && myForm.get('imagem')?.touched"
+    >
+      Imagem é obrigatória
+    </div>
     <input
       type="text"
       placeholder="Categoria"
