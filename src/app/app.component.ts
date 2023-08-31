@@ -99,6 +99,7 @@ export class AppComponent {
 
       lastValueFrom(promise).then(() => {
         alert("Formulário enviado com sucesso!");
+        this.myForm.reset();
       }).catch(() => {
         alert("Ocorreu um erro ao enviar o formulário");
       });
