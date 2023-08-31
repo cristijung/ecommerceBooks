@@ -1,197 +1,95 @@
 <form [formGroup]="myForm" (ngSubmit)="submitForm()">
   <div>
-    <input
-      type="text"
-      placeholder="Código de cadastro"
-      matInput
-      formControlName="codigoCadastro"
-    />
-    <div
-      class="erro"
-      *ngIf="
+    <input type="text" placeholder="Código de cadastro" matInput formControlName="codigoCadastro" />
+    <div class="erro" *ngIf="
         myForm.get('codigoCadastro')?.invalid &&
         myForm.get('codigoCadastro')?.touched
-      "
-    >
+      ">
       Código de cadastro é obrigatório
     </div>
     <input type="text" placeholder="Título" matInput formControlName="titulo" />
-    <div
-      class="erro"
-      *ngIf="myForm.get('titulo')?.invalid && myForm.get('titulo')?.touched"
-    >
+    <div class="erro" *ngIf="myForm.get('titulo')?.invalid && myForm.get('titulo')?.touched">
       Título é obrigatório
     </div>
     <input type="text" placeholder="Descrição" matInput formControlName="descricao" />
-    <div
-      class="erro"
-      *ngIf="myForm.get('descricao')?.invalid && myForm.get('descricao')?.touched"
-    >
+    <div class="erro" *ngIf="myForm.get('descricao')?.invalid && myForm.get('descricao')?.touched">
       Descrição é obrigatória
     </div>
-    <input
-      type="text"
-      placeholder="Imagem"
-      matInput
-      formControlName="imagem"
-    />
-    <div
-      class="erro"
-      *ngIf="myForm.get('imagem')?.invalid && myForm.get('imagem')?.touched"
-    >
+    <input type="text" placeholder="Imagem" matInput formControlName="imagem" />
+    <div class="erro" *ngIf="myForm.get('imagem')?.invalid && myForm.get('imagem')?.touched">
       Imagem é obrigatória
     </div>
-    <input
-      type="text"
-      placeholder="Categoria"
-      matInput
-      formControlName="categoria"
-    />
-    <div
-      class="erro"
-      *ngIf="
+    <input type="text" placeholder="Categoria" matInput formControlName="categoria" />
+    <div class="erro" *ngIf="
         myForm.get('categoria')?.invalid && myForm.get('categoria')?.touched
-      "
-    >
+      ">
       Categoria é obrigatória
     </div>
     <input type="text" placeholder="autor" matInput formControlName="autor" />
-    <div
-      class="erro"
-      *ngIf="myForm.get('autor')?.invalid && myForm.get('autor')?.touched"
-    >
+    <div class="erro" *ngIf="myForm.get('autor')?.invalid && myForm.get('autor')?.touched">
       Autor é obrigatório
     </div>
-    <input
-      type="text"
-      placeholder="editora"
-      matInput
-      formControlName="editora"
-    />
-    <div
-      class="erro"
-      *ngIf="myForm.get('editora')?.invalid && myForm.get('editora')?.touched"
-    >
+    <input type="text" placeholder="editora" matInput formControlName="editora" />
+    <div class="erro" *ngIf="myForm.get('editora')?.invalid && myForm.get('editora')?.touched">
       Editora é obrigatória
     </div>
-    <input
-      type="date"
-      placeholder="Data da Última Edição"
-      matInput
-      formControlName="dataUltimaEdicao"
-    />
-    <div
-      class="erro"
-      *ngIf="
+    <input type="date" placeholder="Data da Última Edição" matInput formControlName="dataUltimaEdicao" />
+    <div class="erro" *ngIf="
         myForm.get('dataUltimaEdicao')?.invalid &&
         myForm.get('dataUltimaEdicao')?.touched
-      "
-    >
+      ">
       Data da Última Edição é obrigatória
     </div>
     <label for="precoCusto">Preço de Custo</label>
-    <input
-      type="number"
-      placeholder="Preço de Custo"
-      matInput
-      formControlName="precoCusto"
-      id="precoCusto"
-    />
-    <div
-      class="erro"
-      *ngIf="
+    <input type="number" placeholder="Preço de Custo" matInput formControlName="precoCusto" id="precoCusto" />
+    <div class="erro" *ngIf="
         myForm.get('precoCusto')?.invalid && myForm.get('precoCusto')?.touched
-      "
-    >
+      ">
       Preço de custo é obrigatório
     </div>
     <label for="precoVenda">Preço de Venda</label>
-    <input
-      type="number"
-      placeholder="Preço de Venda"
-      matInput
-      formControlName="precoVenda"
-      id="precoVenda"
-    />
-    <div
-      class="erro"
-      *ngIf="
+    <input type="number" placeholder="Preço de Venda" matInput formControlName="precoVenda" id="precoVenda" />
+    <div class="erro" *ngIf="
         myForm.get('precoVenda')?.invalid && myForm.get('precoVenda')?.touched
-      "
-    >
+      ">
       Preço de venda é obrigatório
     </div>
     <label for="volumesEstoque">Volumes em Estoque</label>
-    <input
-      type="number"
-      placeholder="Volumes em Estoque"
-      matInput
-      formControlName="volumesEstoque"
-      id="volumesEstoque"
-    />
-    <div
-      class="erro"
-      *ngIf="
+    <input type="number" placeholder="Volumes em Estoque" matInput formControlName="volumesEstoque"
+      id="volumesEstoque" />
+    <div class="erro" *ngIf="
         myForm.get('volumesEstoque')?.invalid &&
         myForm.get('volumesEstoque')?.touched
-      "
-    >
+      ">
       Volumes em estoque é obrigatório
     </div>
     <label for="vendidos">Volumes Vendidos</label>
-    <input
-      type="number"
-      placeholder="Vendidos"
-      matInput
-      formControlName="vendidos"
-      id="vendidos"
-    />
-    <div
-      class="erro"
-      *ngIf="myForm.get('vendidos')?.invalid && myForm.get('vendidos')?.touched"
-    >
+    <input type="number" placeholder="Vendidos" matInput formControlName="vendidos" id="vendidos" />
+    <div class="erro" *ngIf="myForm.get('vendidos')?.invalid && myForm.get('vendidos')?.touched">
       Quantidade de livros vendidos é obrigatório
     </div>
     <label for="dataUltimaVenda">Data da Última Venda</label>
-    <input
-      type="date"
-      placeholder="Data da Última Venda"
-      matInput
-      formControlName="dataUltimaVenda"
-
-    />
-    <div
-      class="erro"
-      *ngIf="
+    <input type="date" placeholder="Data da Última Venda" matInput formControlName="dataUltimaVenda" />
+    <div class="erro" *ngIf="
         myForm.get('dataUltimaVenda')?.invalid &&
         myForm.get('dataUltimaVenda')?.touched
-      "
-    >
+      ">
       Data da última venda é obrigatória
     </div>
     <label for="nomeVendedor">Nome do Vendedor</label>
-    <input
-      type="text"
-      placeholder="Nome do Vendedor"
-      matInput
-      formControlName="nomeVendedor"
-    />
-    <div
-      class="erro"
-      *ngIf="
+    <input type="text" placeholder="Nome do Vendedor" matInput formControlName="nomeVendedor" />
+    <div class="erro" *ngIf="
         myForm.get('nomeVendedor')?.invalid &&
         myForm.get('nomeVendedor')?.touched
-      "
-    >
+      ">
       Nome do vendedor é obrigatório
     </div>
-    <input
-      type="checkbox"
-      name="comissao"
-      id="comissao"
-      formControlName="comissao"
-    />
+    <input type="checkbox" name="comissao" id="comissao" formControlName="comissao" />
     <label for="comissao">Deseja aplicar comissão?</label>
   </div>
   <button mat-button type="submit">Cadastrar</button>
 </form>
+
+<app-home>
+
+</app-home>

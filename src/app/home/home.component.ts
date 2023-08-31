@@ -7,6 +7,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 
+
+export class HomeComponent {
+  books : newBook[] = [];
+
+  constructor(http: HttpClient) {
+    http
+      .get<any[]>('https://ebooks-api-steel.vercel.app/books')
+      .subscribe((data) => {
+        this.books = data;
+        console.log(data);
+      });
+    }
+
+    displayedColumns: string[] = ['id', 'name', 'email'];
+}
+
 interface newBook {
   isbn: string,
   titulo: string,
@@ -24,15 +40,3 @@ interface newBook {
   nome_vendedor: string,
   comissao: boolean,
 };
-export class HomeComponent {
-  
-  constructor(http: HttpClient) {
-    http
-      .get<any[]>('https://ebooks-api-steel.vercel.app/books')
-      .subscribe((data) => {
-        this.veterinarios = data;
-      });
-    }
-
-    displayedColumns: string[] = ['id', 'name', 'email'];
-}
