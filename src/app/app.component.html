@@ -1,4 +1,5 @@
 <form [formGroup]="myForm" (ngSubmit)="submitForm()">
+  <h2>Adicione um livro</h2>
   <div>
     <input type="text" placeholder="Código de cadastro" matInput formControlName="codigoCadastro" />
     <div class="erro" *ngIf="
@@ -40,21 +41,18 @@
       ">
       Data da Última Edição é obrigatória
     </div>
-    <label for="precoCusto">Preço de Custo</label>
     <input type="number" placeholder="Preço de Custo" matInput formControlName="precoCusto" id="precoCusto" />
     <div class="erro" *ngIf="
         myForm.get('precoCusto')?.invalid && myForm.get('precoCusto')?.touched
       ">
       Preço de custo é obrigatório
     </div>
-    <label for="precoVenda">Preço de Venda</label>
     <input type="number" placeholder="Preço de Venda" matInput formControlName="precoVenda" id="precoVenda" />
     <div class="erro" *ngIf="
         myForm.get('precoVenda')?.invalid && myForm.get('precoVenda')?.touched
       ">
       Preço de venda é obrigatório
     </div>
-    <label for="volumesEstoque">Volumes em Estoque</label>
     <input type="number" placeholder="Volumes em Estoque" matInput formControlName="volumesEstoque"
       id="volumesEstoque" />
     <div class="erro" *ngIf="
@@ -63,12 +61,10 @@
       ">
       Volumes em estoque é obrigatório
     </div>
-    <label for="vendidos">Volumes Vendidos</label>
     <input type="number" placeholder="Vendidos" matInput formControlName="vendidos" id="vendidos" />
     <div class="erro" *ngIf="myForm.get('vendidos')?.invalid && myForm.get('vendidos')?.touched">
       Quantidade de livros vendidos é obrigatório
     </div>
-    <label for="dataUltimaVenda">Data da Última Venda</label>
     <input type="date" placeholder="Data da Última Venda" matInput formControlName="dataUltimaVenda" />
     <div class="erro" *ngIf="
         myForm.get('dataUltimaVenda')?.invalid &&
@@ -76,7 +72,6 @@
       ">
       Data da última venda é obrigatória
     </div>
-    <label for="nomeVendedor">Nome do Vendedor</label>
     <input type="text" placeholder="Nome do Vendedor" matInput formControlName="nomeVendedor" />
     <div class="erro" *ngIf="
         myForm.get('nomeVendedor')?.invalid &&
@@ -84,10 +79,12 @@
       ">
       Nome do vendedor é obrigatório
     </div>
-    <input type="checkbox" name="comissao" id="comissao" formControlName="comissao" />
-    <label for="comissao">Deseja aplicar comissão?</label>
+    <div class="checkbox">
+      <label for="comissao">Comissão inclusa?</label>
+      <input type="checkbox" name="comissao" id="comissao" formControlName="comissao" />
+    </div>
   </div>
-  <button mat-button type="submit">Cadastrar</button>
+  <button mat-raised-button color="primary" type="submit" class="button">Cadastrar</button>
 </form>
 
 <app-home>

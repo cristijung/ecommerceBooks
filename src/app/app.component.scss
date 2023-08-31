@@ -1,23 +1,59 @@
-form{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    margin: auto;
-    
-    &>div{
-        
+form {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  font-family: "Montserrat", sans-serif;
+  padding: 2rem 0;
+
+  h2 {
+    text-transform: uppercase;
+  }
+
+  & > div {
     gap: 1rem;
     display: flex;
     flex-direction: column;
 
-    input{
-        border: 1px solid black;
-        border-radius: 4px;
-        padding: 0.5rem;
+    input {
+      color: white;
+      border: 1px solid #3f51b5;
+      border-radius: 0.5rem;
+      height: 3rem;
+      padding: 0.5rem;
+      width: 50%;
+      background-color: transparent;
+      margin: 0 auto;
+      font-family: "Montserrat", sans-serif;
+
+      &::placeholder {
+        color: white;
+      }
     }
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    color: #e2e2e2;
+
+    input {
+        width: auto;
+        margin: 0;
+        height: 1.5rem;
+        width: 1.5rem;
     }
+  }
+
+  .button {
+    align-self: center;
+  }
 }
 
-.erro{
-    color: red;
+.erro {
+  color: red;
+  width: 50%;
+  margin: 0 auto;
 }
