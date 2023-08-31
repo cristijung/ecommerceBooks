@@ -1,16 +1,20 @@
-<div *ngFor="let book of books">
-  <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{book.titulo}}</mat-card-title>
-      <mat-card-subtitle>{{book.autor}}</mat-card-subtitle>
-      <mat-card-subtitle>{{book.editora}}</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image [src]="book.imagem" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-      <p>
-        {{book.descricao}}
-      </p>
-    </mat-card-content>
-  </mat-card>
+<div class="container-cards">
+  <div *ngFor="let book of books">
+    <mat-card class="book-card">
+      <img mat-card-image [src]="book.imagem" [alt]="book.titulo" />
+      <mat-card-header>
+        <mat-card-title>{{ book.titulo }}</mat-card-title>
+        <mat-card-subtitle>{{ book.autor }}</mat-card-subtitle>
+        <mat-card-subtitle>{{ book.editora }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p class="card-descricao">
+          {{ book.descricao }}
+        </p>
+      </mat-card-content>
+      <mat-card-footer>
+        <p>{{ book.preco_venda }}</p>
+      </mat-card-footer>
+    </mat-card>
+  </div>
 </div>
